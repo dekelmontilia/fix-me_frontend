@@ -1,0 +1,1 @@
+export { NisimComponent } from './NisimComponent'

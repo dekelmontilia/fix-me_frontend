@@ -1,0 +1,1 @@
+export { CartItemsGallery } from './CartItemsGallery'

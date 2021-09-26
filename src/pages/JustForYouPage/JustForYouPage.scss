@@ -1,0 +1,107 @@
+@import '../../assets/scss/setup/variables';
+
+.just-for-you-page {
+  > .title {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  > .filter-by-button {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    display: none;
+  }
+  > .boxes-container {
+    > :first-child {
+      margin-inline-end: 50px;
+    }
+    > .filters-box {
+      min-width: 300px;
+      width: 300px;
+      max-width: 300px;
+      overflow: hidden;
+      background-color: $pink;
+      border-radius: 50px;
+      overflow: hidden;
+      padding: 30px 20px;
+      > *:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      > .title {
+        margin-bottom: 40px;
+      }
+      > .or-title {
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.results-box {
+  > .box {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.filter-box {
+  &.filter-by-size-box {
+    > .box {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  &.filter-by-color-box {
+    > .box {
+      column-gap: 20px;
+      row-gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &.filter-by-category-box {
+    > .box {
+      column-gap: 20px;
+      row-gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  > .title {
+    color: $brown;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $break-normal) {
+  .filter-by-button {
+    display: block !important;
+  }
+  .boxes-container {
+    position: relative;
+    overflow: hidden;
+    > :first-child {
+      margin-inline-end: unset !important;
+    }
+    .filters-box {
+      transition: 0.2s all;
+      // display: none;
+      position: absolute;
+      right: 5%;
+      transform: translateX(200%);
+      &.active {
+        transform: translateX(0);
+
+        // display: block;
+      }
+    }
+    .results-box {
+      > .box {
+        justify-content: center !important;
+      }
+    }
+  }
+}

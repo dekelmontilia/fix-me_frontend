@@ -1,0 +1,152 @@
+@font-face {
+  src: url('../../fonts/by-sajidah/BY\ Sajidah\ DEMO.ttf');
+  font-family: primaryFont;
+}
+
+body {
+  background: $background;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: primaryFont;
+}
+
+// Scroll-bar:
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  // background-color: #f9f9f9;
+  font-family: $reg-text;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  padding: unset;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: unset;
+  color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+.page {
+  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 150px;
+}
+
+.primary-button {
+  background-color: $primary;
+  padding: 10px 18px;
+  border-radius: 7px;
+  color: white;
+  font-size: 15px;
+  &.square {
+    border-radius: 0;
+    padding: 10px 38px;
+  }
+  &[disabled] {
+    background-color: grey;
+    opacity: 0.5;
+    cursor: unset;
+  }
+}
+
+input {
+  font-size: 16px;
+}
+
+.interactive-modal {
+  > .modal {
+    .title {
+      margin-bottom: 10px;
+    }
+    .list {
+      column-gap: 10px;
+      row-gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.app-input {
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: unset;
+}
+
+.card {
+  background: $pink;
+  padding: 20px 30px;
+  border-radius: 20px;
+  > .title {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  > .field-wrapper {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    > .field {
+      margin-bottom: 2px;
+      > *:not(:last-child) {
+        margin-inline-end: 8px;
+      }
+    }
+  }
+  > .primary-button {
+    margin-bottom: 7px;
+  }
+  > .little-message {
+    > span {
+      cursor: pointer;
+    }
+  }
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border: 2px solid black;
+}

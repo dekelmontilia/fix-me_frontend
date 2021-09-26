@@ -1,0 +1,73 @@
+@import '../../assets/scss/setup/variables';
+
+.product-page {
+  padding-top: 120px;
+  > .container {
+    > .break-normal-image {
+      display: none;
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+    }
+    > .top-section {
+      > .content {
+        padding-top: 30px;
+        width: 400px;
+        .product-name,
+        .product-price {
+          color: $brown;
+        }
+        .product-name {
+          margin-bottom: 15px;
+        }
+        .product-price {
+          margin-bottom: 40px;
+        }
+        .palette-title {
+          font-size: 17px;
+          margin-bottom: 4px;
+        }
+        .palette {
+          margin-bottom: 16px;
+        }
+        .colors-palette {
+          > *:not(:last-child) {
+            margin-inline-end: 5px;
+          }
+        }
+        .sizes-palette {
+          margin-bottom: 90px;
+          > *:not(:last-child) {
+            margin-inline-end: 15px;
+          }
+        }
+        .actions-row {
+          > *:not(:last-child) {
+            margin-inline-end: 10px;
+          }
+        }
+      }
+      .main-image-container {
+        overflow: hidden;
+        margin-inline-end: 70px;
+        max-height: 600px;
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $break-normal) {
+  .product-page {
+    > .container > .break-normal-image {
+      display: block;
+    }
+    .main-image-container {
+      display: none !important;
+    }
+  }
+}

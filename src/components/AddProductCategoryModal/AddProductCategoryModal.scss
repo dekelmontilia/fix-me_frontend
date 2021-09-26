@@ -1,0 +1,13 @@
+.add-product-category-modal {
+  > .modal {
+    .title {
+      margin-bottom: 10px;
+    }
+    .list {
+      column-gap: 10px;
+      row-gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+  }
+}

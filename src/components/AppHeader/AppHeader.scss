@@ -1,0 +1,119 @@
+@import '../../assets/scss/setup/variables';
+
+.fixed-header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.2s;
+  &.active {
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+.app-header {
+  overflow: hidden;
+  // width: 100%;
+  // z-index: -10;
+  background: $background;
+  padding-top: 22px;
+  padding-bottom: 7px;
+  align-items: flex-end;
+  transition: all 0.2s;
+  .navigation-container {
+    padding-inline-start: 1rem;
+    align-items: flex-end;
+    .hamburger-button {
+      display: none;
+    }
+    .logo-container {
+      margin-inline-end: 10px;
+    }
+    .main-nav {
+      margin-bottom: 10px;
+      > * {
+        color: $strong-pink;
+      }
+      > *:not(:last-child) {
+        margin-inline-end: 30px;
+      }
+    }
+  }
+  .left-container {
+    // background-color: red;
+    .top-bar {
+      justify-content: flex-end;
+      margin-bottom: 19px;
+      > * {
+        width: 19px;
+        &:not(:last-child) {
+          margin-inline-end: 29px;
+        }
+        > img {
+          width: 100%;
+        }
+      }
+    }
+    .cart-button {
+      position: relative;
+      > .circle {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        background-color: #fe36b1;
+        width: 20px;
+        height: 20px;
+        transform: translate(-40%, -10%);
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.search-box {
+  width: 330px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px 14px;
+  > img {
+    width: 18px;
+    margin-inline-end: 10px;
+  }
+  input {
+    border: unset;
+    outline: none;
+  }
+}
+
+@media (max-width: $break-normal) {
+  .app-header {
+    .hamburger-button {
+      display: block !important;
+      margin-inline-end: 10px;
+    }
+    .main-nav {
+      display: none;
+    }
+  }
+}
+
+.app-hamburger {
+  transform: translateY(-100%);
+  z-index: -10;
+  background-color: $background;
+  position: absolute;
+  width: 100%;
+  transition: 0.2s all;
+  &.active {
+    transform: translateY(0);
+  }
+  > .hamburger-nav {
+    padding: 20px;
+    > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

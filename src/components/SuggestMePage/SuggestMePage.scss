@@ -1,0 +1,18 @@
+.suggest-me-page {
+  > .card {
+    max-width: 500px;
+    > .head {
+      align-self: center;
+      margin-bottom: 10px;
+      > *:not(:last-child) {
+        margin-inline-end: 10px;
+      }
+    }
+    > .fields-box {
+      row-gap: 10px;
+      column-gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+  }
+}

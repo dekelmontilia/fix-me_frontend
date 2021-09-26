@@ -1,0 +1,21 @@
+@import '../../assets/scss/setup/variables';
+
+.product-size-button {
+  color: $brown;
+  width: 70px;
+  height: 38px;
+  border: 1.2px solid;
+  &.filled {
+    background-color: white;
+  }
+  &.active {
+    border: 2px solid black;
+  }
+  &.clickable {
+    cursor: pointer;
+  }
+  > * {
+    margin-bottom: 0.3em;
+    font-weight: 600;
+  }
+}

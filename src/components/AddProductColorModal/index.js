@@ -1,0 +1,1 @@
+export { AddProductColorModal } from './AddProductColorModal'

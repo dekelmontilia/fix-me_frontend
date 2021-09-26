@@ -1,0 +1,1 @@
+export { RemoveProductColorModal } from './RemoveProductColorModal'

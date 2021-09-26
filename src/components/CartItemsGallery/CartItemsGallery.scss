@@ -1,0 +1,17 @@
+$padding: calc((100vw - 1040px) / 2);
+
+.cart-items-gallery {
+  padding: 0 30px;
+  padding-bottom: 20px;
+  // > *:not(:last-child) {
+  //   margin-inline-end: 40px;
+  // }
+  white-space: nowrap;
+  column-gap: 40px;
+  overflow-x: scroll;
+}
+
+.empty-cart-text {
+  text-align: center;
+  font-size: 17px;
+}
